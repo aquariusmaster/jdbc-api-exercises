@@ -42,7 +42,7 @@ public class AccountDbInitializer {
      */
     public void init() throws SQLException {
         try (Connection connection = dataSource.getConnection()) {
-            connection.prepareStatement(CREATE_TABLE).execute();
+            connection.prepareStatement(CREATE_TABLE).executeUpdate();
         }
     }
 }
